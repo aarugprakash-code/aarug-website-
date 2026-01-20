@@ -1,4 +1,4 @@
-import heroImage from '../assets/hero.jpg'
+import Hero from '../assets/Hero.jpg'
 
 export default function Hero() {
   return (
@@ -14,7 +14,7 @@ export default function Hero() {
       </p>
 
       <img
-        src={heroImage}
+        src={Hero}
         alt="Menstrual health education session"
         className="hero-image"
       />
