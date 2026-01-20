@@ -63,6 +63,39 @@ body {
   box-shadow: none;
 }
 
+.menu-btn {
+  display: none;
+  font-size: 1.6rem;
+  background: none;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+    margin-right: 2rem;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    padding: 1rem;
+    transform: translateY(-20px);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+
+  .nav-links.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
 
 
 /* HERO SECTION */
