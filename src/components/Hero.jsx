@@ -15,7 +15,7 @@ export default function Hero() {
 
       <img
         src={imgHero}
-        alt="Menstrual health education session"
+        alt="Menstrual health education workshop conducted by Aarug"
         className="hero-image"
       />
 
