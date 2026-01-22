@@ -9,6 +9,9 @@ function App() {
   return (
     <>
       <Navbar />
+      <h1 className="sr-only">
+        Menstrual Health Education & Reusable Pads in India
+      </h1>
       <Hero />
       <Trust />
       <Offerings />
