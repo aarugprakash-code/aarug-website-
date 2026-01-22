@@ -21,6 +21,10 @@ body {
   z-index: 100;
 }
 
+.Navlogo {
+  height:40px;
+}
+
 .navbar-show {
   transform: translateY(0);
 }
@@ -30,7 +34,7 @@ body {
 }
 
 .logo {
-  height: 40px;
+  height:20px;
 }
 
 .nav-links {

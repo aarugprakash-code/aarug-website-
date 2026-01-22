@@ -6,7 +6,7 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      <img src={logo} alt="Aarug menstrual health education initiative logo" />
+      <img className="Navlogo" src={logo} alt="Aarug menstrual health education initiative logo" />
 
       <button
         className="menu-btn"
