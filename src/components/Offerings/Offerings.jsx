@@ -1,5 +1,5 @@
 import './Offerings.css'
-import OfferingsImageWorkshop from "../../assets/OfferingsImageWOrkshop.jpg";
+import OfferingsImageWorkshop from "../../assets/OfferingsImageWorkshop.jpg";
 import OfferingsImagePad from "../../assets/OfferingsImagePad.jpg";
 import OfferingsImageInclusion from "../../assets/OfferingsImageInclusion.jpg";
 
