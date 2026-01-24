@@ -1,0 +1,90 @@
+/* =====================
+   TESTIMONIALS SECTION
+===================== */
+
+.testimonials {
+  padding: 50px 8%;
+  background: #f9fafb;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 1.8rem;
+  margin-bottom: 50px;
+  
+}
+
+.testimonials-subtext {
+  max-width: 720px;
+  margin-bottom: 30px;
+  margin: 12px auto 40px;
+  color: #555;
+  font-size: 1.05rem;
+}
+
+/* =====================
+   VIDEO GRID
+===================== */
+
+.testimonial-videos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* =====================
+   VIDEO CARD
+===================== */
+
+.video-card {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+}
+
+/* YouTube iframe */
+.video-card iframe {
+  width: 60%;
+  aspect-ratio: 9 / 16;
+  max-height: auto;            /* 👈 CONTROL HEIGHT */
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  background: #000;
+}
+
+/* Caption */
+.video-card span {
+  font-size: 0.9rem;
+  color: #444;
+}
+
+/* =====================
+   MOBILE FIX
+===================== */
+
+@media (max-width: 768px) {
+  .testimonial-videos {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row on mobile */
+    gap: 16px;
+  }
+
+  .video-card iframe {
+    max-height: 600px;  
+    height: auto;        /* 👈 MUCH shorter on phones */
+  }
+}
+
+/* EXTRA SMALL DEVICES */
+@media (max-width: 480px) {
+  .testimonial-videos {
+    grid-template-columns: 1fr; /* 1 per row if screen is very small */
+  }
+
+  .video-card iframe {
+    max-height: 620px;
+    max-width: 300px;
+  }
+}

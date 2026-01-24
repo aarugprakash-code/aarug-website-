@@ -1,9 +1,13 @@
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Trust from './components/Trust'
-import Offerings from './components/Offerings'
-import Social from './components/Social'
-import CTA from './components/CTA'
+import Navbar from "./components/Navbar/Navbar";
+import Hero from "./components/Hero/Hero";
+import ImageSlider from "./components/ImageSlider/ImageSlider";
+import Trust from "./components/Trust/Trust";
+import Offerings from "./components/Offerings/Offerings";
+import Testimonials from "./components/Testimonials/Testimonials";
+import Social from "./components/Social/Social";
+import CTA from "./components/CTA/CTA";
+
+
 
 function App() {
   return (
@@ -11,6 +15,8 @@ function App() {
       <Navbar />
       <Hero />
       <Trust />
+      <ImageSlider />
+      <Testimonials />
       <Offerings />
       <Social />
       <CTA />

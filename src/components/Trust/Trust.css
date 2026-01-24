@@ -1,0 +1,265 @@
+/* =====================
+   TRUST SECTION
+===================== */
+
+.trust {
+  background: #f9faf9;
+  padding: 80px 8%;
+  text-align: center;
+}
+
+.trust h2 {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+  color: #111;
+}
+
+.trust-subtext {
+  max-width: 720px;
+  margin: 0 auto 40px;
+  color: #555;
+  font-size: 1.1rem;
+}
+
+/* =====================
+   TRUST STATS
+===================== */
+
+.trust-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 720px;
+  margin: 0 auto 40px;
+}
+
+.trust-item {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.trust-item strong {
+  display: block;
+  font-size: 1.4rem;
+  color: #1b5e20;
+  margin-bottom: 6px;
+}
+
+.trust-item span {
+  font-size: 0.85rem;
+  color: #444;
+}
+
+/* =====================
+   IMAGE PROOF
+===================== */
+
+.trust-images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: 40px auto 24px;
+}
+
+.trust-images img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.trust-workshop-image {
+  height: 220px;
+}
+
+
+
+/* =====================
+   NOTE
+===================== */
+
+.trust-note {
+  max-width: 720px;
+  margin:40px auto 0;
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.trust-authority {
+  font-size: 1.3rem;
+  color: #2e7d32;
+  font-weight: 500;
+  margin: 16px auto 28px;
+  max-width: 760px;
+}
+
+
+/* =====================
+   RESPONSIVE — LAPTOP (≤ 1440px)
+===================== */
+
+@media (max-width: 1440px) {
+  .trust {
+    padding: 64px 6%;
+  }
+
+  .trust h2 {
+    font-size: 1.75rem;
+  }
+
+  .trust-subtext {
+    font-size: 0.95rem;
+  }
+
+  .trust-item strong {
+    font-size: 1.4rem;
+  }
+
+  .trust-item span {
+    font-size: 0.85rem;
+  }
+
+  .trust-images img {
+    height: 200px;
+  }
+  
+}
+
+.trust-workshop-image {
+  height: 220px;
+}
+
+
+/* =====================
+   RESPONSIVE — SMALL LAPTOP (≤ 1280px)
+===================== */
+
+@media (max-width: 1280px) {
+  .trust {
+    padding: 20px 5% 50px 5%;
+  }
+
+  .trust-stats {
+    gap: 18px;
+  }
+
+  .trust-images {
+    gap: 16px;
+  }
+
+  .trust-images img {
+    height: 180px;
+  }
+}
+
+.trust-images {
+  margin-top: 48px;
+}
+
+.trust-images img {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.trust-images img:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+.trust-workshop-image {
+  height: 220px;
+}
+
+
+/* =====================
+   RESPONSIVE — TABLET / MOBILE (≤ 900px)
+===================== */
+
+
+@media (max-width: 900px) {
+
+  /* Move images right after authority line */
+  .trust-images {
+    order: 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    max-width: 100%;
+    margin: 28px auto 32px;
+  }
+
+  /* Center the 3rd image */
+  .trust-images img:nth-child(3) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    max-width: 70%;
+  }
+
+  /* Reduce image height for phones */
+  .trust-images img {
+    height: 160px;
+  }
+
+  /* Reorder other sections cleanly */
+  .trust-authority {
+    order: 1;
+    font-size: 0.9rem;
+  }
+
+  .trust-subtext {
+    order: 3;
+    margin-top: 24px;
+  }
+
+  .trust-stats {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 80% 80%;
+    align-items: center;
+    order: 4;
+    margin: 0;
+    margin-top: 28px;
+    max-width: 200px;
+    text-align: center;
+  }
+
+  .trust-item {
+  background: white;
+  padding: 20px;
+  height: 80px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.04);
+}
+
+.trust-item strong {
+  display: block;
+  font-size: 1.2rem;
+  color: #1b5e20;
+  margin-bottom: 6px;
+}
+
+.trust-item span {
+  font-size: 0.85rem;
+  color: #444;
+}
+
+  .trust-note {
+    order: 5;
+    font-weight: 400;
+  }
+
+  /* Enable ordering */
+  .trust {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.trust-workshop-image {
+  height: 220px;
+}
+

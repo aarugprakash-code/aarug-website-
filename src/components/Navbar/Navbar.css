@@ -1,0 +1,167 @@
+/* =====================
+   NAVBAR BASE (Large screens)
+===================== */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 72px;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+  border-bottom: 1px solid #eee;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 100;
+}
+
+.navbar-show {
+  transform: translateY(0);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-hide {
+  transform: translateY(-100%);
+  box-shadow: none;
+}
+
+/* LOGO */
+
+.logo {
+  height: 40px;
+}
+
+/* LINKS */
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  margin-right: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+/* CTA */
+
+.nav-cta {
+  padding: 0.45rem 0.95rem;
+  border-radius: 6px;
+  background: #2e7d32;
+  color: white !important;
+  font-size: 0.95rem;
+}
+
+/* MENU BUTTON (mobile only) */
+
+.menu-btn {
+  display: none;
+  font-size: 1.6rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* =====================
+   LAPTOP (≤ 1440px)
+===================== */
+
+@media (max-width: 1440px) {
+  .navbar {
+    height: 64px;
+    padding: 0 1.2rem;
+  }
+
+  .logo {
+    height: 36px;
+  }
+
+  .nav-links {
+    gap: 1.2rem;
+    margin-right: 1.5rem;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+
+  .nav-cta {
+    padding: 0.4rem 0.85rem;
+    font-size: 0.88rem;
+  }
+}
+
+/* =====================
+   SMALL LAPTOP (≤ 1280px)
+===================== */
+
+@media (max-width: 1280px) {
+  .navbar {
+    height: 58px;
+    padding: 0 1rem;
+  }
+
+  .logo {
+    height: 32px;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+
+  .nav-links a {
+    font-size: 0.85rem;
+  }
+
+  .nav-cta {
+    font-size: 0.85rem;
+  }
+}
+
+/* =====================
+   MOBILE / TABLET
+===================== */
+
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+    margin-right: 1rem;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+    transform: translateY(-20px);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  }
+
+  .nav-links.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-links a {
+    font-size: 0.95rem;
+  }
+
+  .nav-cta {
+    font-size: 0.9rem;
+  }
+}

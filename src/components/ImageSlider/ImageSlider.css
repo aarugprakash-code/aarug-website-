@@ -1,0 +1,45 @@
+/* image slider section */
+
+.image-slider {
+  background: #f9fafb;
+  padding: 20px 0 10px 0;
+}
+
+/* Slider Track */
+.slider-track {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 0 1rem 10px;
+
+  cursor: grab;
+  scroll-behavior: smooth;
+
+  /* Performance optimizations */
+  will-change: transform;
+  -webkit-overflow-scrolling: touch;
+
+  user-select: none;
+}
+
+.slider-track.active {
+  cursor: grabbing;
+}
+
+/* Hide scrollbar */
+.slider-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* Images */
+.slider-track img {
+  min-width: 250px;
+  height: 180px;
+
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+
+  user-select: none;
+  pointer-events: none;
+}
