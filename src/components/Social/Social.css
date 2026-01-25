@@ -26,8 +26,8 @@
 .social-links a {
   padding: 0.6rem 1.2rem;
   border-radius: 20px;
-  border: 1.5px solid #e63946;
-  color: #e63946;
+  border: 1.5px solid #1b5e20;
+  color: #1b5e20;
   text-decoration: none;
   font-weight: 600;
   transition: background-color 0.25s ease, color 0.25s ease;
@@ -35,6 +35,6 @@
 
 
 .social-links a:hover {
-  background-color: #e63946;
+  background-color: #1b5e20;
   color: white;
 }

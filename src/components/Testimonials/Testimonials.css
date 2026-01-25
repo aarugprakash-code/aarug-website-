@@ -4,13 +4,14 @@
 
 .testimonials {
   padding: 50px 8%;
-  background: #f9fafb;
+  padding-bottom: 70px;
   text-align: center;
 }
 
 .testimonials h2 {
   font-size: 1.8rem;
   margin-bottom: 50px;
+  margin-top: 0;
   
 }
 

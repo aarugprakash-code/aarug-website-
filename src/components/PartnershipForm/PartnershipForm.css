@@ -1,0 +1,80 @@
+.partnership-form-section {
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.partnership-form-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.partnership-subtext {
+  text-align: center;
+  max-width: 100%;
+  margin: 0 auto 40px;
+  color: #555;
+}
+
+.partnership-form {
+  max-width: 90%;
+  margin: auto;
+  background: #fff;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns:1fr;
+  gap: 16px;
+}
+
+label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+input,
+select,
+textarea {
+  padding: 0.65rem 0.7rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.full-width {
+  width: 100%;
+  margin-top: 16px;
+}
+
+.form-note {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 14px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .partnership-form {
+    padding: 24px;
+  }
+}

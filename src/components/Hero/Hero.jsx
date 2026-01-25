@@ -1,14 +1,15 @@
 import "./Hero.css";
 import heroImage from "../../assets/heroImage.jpg";
 
-export default function Hero() {
+export default function Hero({ onWorkshopClick, onPartnerClick }) {
   return (
     <section className="hero">
       {/* DESKTOP */}
       <div className="hero-desktop">
         <div className="hero-left">
           <h1>
-            Mestural Education Workshops for Schools
+            Menstrual Education Workshops for Schools
+            <br />
             And Community
           </h1>
 
@@ -19,7 +20,7 @@ export default function Hero() {
             </div>
 
             <div className="metric">
-              <strong>5000+</strong>
+              <strong>5,000+</strong>
               <span>boys engaged</span>
             </div>
 
@@ -35,13 +36,19 @@ export default function Hero() {
           </div>
 
           <div className="hero-actions">
-            <a href="#school-workshops" className="btn primary">
+            <button
+              className="btn primary"
+              onClick={onWorkshopClick}
+            >
               Request a School / Organization Workshop
-            </a>
+            </button>
 
-            <a href="#partnerships" className="btn secondary">
+            <button
+              className="btn secondary"
+              onClick={onPartnerClick}
+            >
               Partner With Aarug (NGOs / Govt / CSR)
-            </a>
+            </button>
           </div>
         </div>
 
@@ -53,7 +60,9 @@ export default function Hero() {
       {/* MOBILE */}
       <div className="hero-mobile">
         <h1>
-          Menstrual Education Workshops for Schools And Community
+          Menstrual Education Workshops for Schools
+          <br />
+          And Community
         </h1>
 
         <img src={heroImage} alt="Aarug workshop session" />
@@ -65,7 +74,7 @@ export default function Hero() {
           </div>
 
           <div className="metric">
-            <strong>5000+</strong>
+            <strong>5,000+</strong>
             <span>boys engaged</span>
           </div>
 
@@ -81,13 +90,19 @@ export default function Hero() {
         </div>
 
         <div className="hero-actions">
-          <a href="#school-workshops" className="btn primary">
+          <button
+            className="btn primary"
+            onClick={onWorkshopClick}
+          >
             Request a School / Organization Workshop
-          </a>
+          </button>
 
-          <a href="#partnerships" className="btn secondary">
+          <button
+            className="btn secondary"
+            onClick={onPartnerClick}
+          >
             Partner With Aarug (NGOs / Govt / CSR)
-          </a>
+          </button>
         </div>
       </div>
     </section>

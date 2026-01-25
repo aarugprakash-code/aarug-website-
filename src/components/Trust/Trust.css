@@ -4,7 +4,7 @@
 
 .trust {
   background: #f9faf9;
-  padding: 80px 8%;
+  padding: 30px 8%;
   text-align: center;
 }
 
@@ -38,7 +38,17 @@
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
+
+.trust-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
 
 .trust-item strong {
   display: block;

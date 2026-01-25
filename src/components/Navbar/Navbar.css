@@ -57,7 +57,22 @@
   background: #2e7d32;
   color: white !important;
   font-size: 0.95rem;
+  border: none;
+  cursor: pointer;
+
+  /* hover animation prep */
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease;
 }
+
+.nav-cta:hover {
+  transform: translateY(-0.5px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+  background: #256628;
+}
+
 
 /* MENU BUTTON (mobile only) */
 

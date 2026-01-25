@@ -1,9 +1,8 @@
-import './Offerings.css'
+import "./Offerings.css";
+
 import OfferingsImageWorkshop from "../../assets/OfferingsImageWorkshop.jpg";
 import OfferingsImagePad from "../../assets/OfferingsImagePad.jpg";
 import OfferingsImageInclusion from "../../assets/OfferingsImageInclusion.jpg";
-
-OfferingsImageInclusion
 
 export default function Offerings() {
   return (
@@ -11,34 +10,44 @@ export default function Offerings() {
       <h2>What We Offer</h2>
 
       <div className="offer-grid">
+        {/* 1. Core Workshops */}
         <div className="offer-card">
-          <img src={OfferingsImageWorkshop} alt="Workshop session" />
-          <h3>Menstrual Health Workshops</h3>
+          <img src={OfferingsImageWorkshop} alt="Menstrual health education workshop" />
+          <h3>Menstrual Health Education Workshops</h3>
           <p>
-            Interactive, story-based sessions for schools, colleges,
-            NGOs, and communities, focused on practical hygiene,
-            safety, and confidence.
+            Structured, age-appropriate menstrual health education programs
+            delivered in schools, colleges, and community settings.
+            Sessions address hygiene, pain, emotional wellbeing, and myths
+            using culturally sensitive, story-based methods.
           </p>
         </div>
 
+        {/* 2. Inclusion */}
         <div className="offer-card">
-          <img src={OfferingsImagePad} alt="pads" />
-          <h3>Eco Friendly / Chemical Free Pads</h3>
+          <img src={OfferingsImageInclusion} alt="Male inclusion session" />
+          <h3>Inclusive Sessions for Boys & Men</h3>
           <p>
-            Affordable, safe, and eco-friendly menstrual solutions,
-            along with proper usage and care education.
+            Sensitization sessions for boys, male teachers, caregivers,
+            and community members to reduce stigma, build empathy,
+            and create safer, more supportive environments for girls.
           </p>
         </div>
 
+        {/* 3. Solutions */}
         <div className="offer-card">
-          <img src={OfferingsImageInclusion} alt="inclusion" />
-          <h3>Male Inclusion Sessions</h3>
+          <img
+            src={OfferingsImagePad}
+            alt="Menstrual product awareness and safe pad education"
+          />
+          <h3>Menstrual Product Awareness & Safe Pad Options</h3>
           <p>
-            Sensitization sessions for boys and men to break stigma
-            and build supportive environments.
+            Aarug provides balanced education on different menstrual products —
+            disposable pads, reusable options, and other safe alternatives.
+            Participants learn correct usage, hygiene, and care so they can choose
+            what suits their comfort, body, and environment.
           </p>
         </div>
       </div>
     </section>
-  )
+  );
 }

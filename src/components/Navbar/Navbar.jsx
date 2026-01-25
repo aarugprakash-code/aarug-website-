@@ -2,8 +2,18 @@ import "./Navbar.css";
 import { useState } from "react";
 import logo from "../../assets/logo.png";
 
-export default function Navbar() {
+export default function Navbar({ onWorkshopClick, onPartnerClick }) {
   const [open, setOpen] = useState(false);
+
+  const handleWorkshop = () => {
+    setOpen(false);          // close mobile menu
+    onWorkshopClick();      // open modal
+  };
+
+  const handlePartner = () => {
+    setOpen(false);
+    onPartnerClick();
+  };
 
   return (
     <nav className="navbar navbar-show">
@@ -18,12 +28,15 @@ export default function Navbar() {
       </button>
 
       <div className={`nav-links ${open ? "open" : ""}`}>
-        <a href="#about">About</a>
-        <a href="#offerings">Programs</a>
-        <a href="#partnerships">Partner With Aarug</a>
-        <a href="#school-workshops" className="nav-cta">
+        <a href="#about" onClick={() => setOpen(false)}>About</a>
+        <a href="#offerings" onClick={() => setOpen(false)}>Programs</a>
+
+        <button
+          className="nav-cta"
+          onClick={handleWorkshop}
+        >
           Request a School / Organization Workshop
-        </a>
+        </button>
       </div>
     </nav>
   );
