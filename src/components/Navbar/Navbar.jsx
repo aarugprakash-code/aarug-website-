@@ -1,6 +1,7 @@
 import "./Navbar.css";
 import { useState } from "react";
 import logo from "../../assets/logo.png";
+import {Link} from 'react-router-dom';
 
 export default function Navbar({ onWorkshopClick, onPartnerClick }) {
   const [open, setOpen] = useState(false);
@@ -28,7 +29,15 @@ export default function Navbar({ onWorkshopClick, onPartnerClick }) {
       </button>
 
       <div className={`nav-links ${open ? "open" : ""}`}>
-        <a href="#about" onClick={() => setOpen(false)}>About</a>
+
+        <Link to="/" onClick={() => setOpen(false)}>
+          Home
+        </Link>
+
+        <Link to="/about" onClick={() => setOpen(false)}>
+          About
+        </Link>
+
         <a href="#offerings" onClick={() => setOpen(false)}>Programs</a>
 
         <button

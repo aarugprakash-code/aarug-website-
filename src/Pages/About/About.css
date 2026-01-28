@@ -1,0 +1,331 @@
+/* =====================================================
+   ABOUT PAGE — BASE
+===================================================== */
+
+.about-page {
+  background: #ffffff;
+  color: #222;
+  padding: 96px 8% 88px;
+  background-color: #f9faf9;
+}
+
+/* =====================================================
+   HERO SECTION (ONLY LEFT–RIGHT BY DEFAULT)
+===================================================== */
+
+.about-hero {
+  text-align: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto 96px;
+}
+
+.about-hero-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.about-hero-lead {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #1b5e20;
+  margin-bottom: 20px;
+}
+
+.about-hero-sub {
+  font-size: 1.05rem;
+  color: #444;
+  line-height: 1.7;
+}
+
+.about-hero-image {
+  display: flex;
+  justify-content: center;
+}
+
+.about-hero-image img {
+  width: 100%;
+  max-width:80%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 16px 36px rgba(0,0,0,0.12);
+}
+
+/* =====================================================
+   CENTERED SECTION — DEFAULT
+===================================================== */
+
+.about-section {
+  max-width: 900px;
+  margin: 0 auto 88px;
+  text-align: center;
+}
+
+.about-section h2 {
+  font-size: 2rem;
+  margin-bottom: 24px;
+  color: #111;
+}
+
+.about-section p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 16px;
+}
+
+/* =====================================================
+   TWO-COLUMN SECTION (USED SELECTIVELY)
+===================================================== */
+
+.two-column {
+  max-width: 1100px;
+  margin: 0 auto 96px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  text-align: left;
+}
+
+.two-column.reverse .about-text {
+  order: 2;
+}
+
+.two-column.reverse .about-image {
+  order: 1;
+}
+
+.about-text {
+  max-width: 520px;
+}
+
+.about-image {
+  display: flex;
+  justify-content: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 520px;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 14px 32px rgba(0,0,0,0.12);
+}
+
+/* =====================================================
+   DATA SECTION — CENTERED & STRONG
+===================================================== */
+
+.data-section {
+  background: #f9faf9;
+  padding: 64px;
+  border-radius: 18px;
+}
+
+.data-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin: 40px 0 24px;
+}
+
+.data-card {
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.data-card:hover {
+  box-shadow: 0 12px 18px rgba(0.05, 0, 0, 0.05);
+  transform: translateY(-3px);
+}
+
+
+.data-card strong {
+  display: block;
+  font-size: 1.8rem;
+  color: #1b5e20;
+  margin-bottom: 10px;
+}
+
+.data-card span {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.data-note {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* =====================================================
+   LISTS (USED INSIDE TWO-COLUMN)
+===================================================== */
+
+.about-list {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0;
+}
+
+.about-list li {
+  font-weight: 500;
+  padding-left: 22px;
+  position: relative;
+  margin-bottom: 12px;
+  font-size: 1.02rem;
+}
+
+.about-list li::before {
+  content: "•";
+  position: relative;
+  left: 0;
+  color: #2e7d32;
+  font-size: 1.4rem;
+}
+
+/* =====================================================
+   BELIEF & CTA — CENTERED ANCHOR
+===================================================== */
+
+/* =====================================================
+   BELIEF SECTION — AARUG STYLE
+===================================================== */
+
+.about-belief {
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  padding: 50px 64px;
+  border-radius: 26px;
+  color: #000000;
+  background-color: #ffffff;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+}
+
+/* Header */
+
+.belief-header h2 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+.belief-statement {
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
+
+.belief-statement span {
+  display: block;
+  margin-top: 6px;
+  font-weight: 600;
+  color: #2e7d32;
+}
+
+/* Grid */
+
+.belief-grid {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+/* Individual cards */
+
+.belief-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 15px 12px;
+  box-shadow: 0 12px 18px rgba(0.05,0,0,0.05);
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.belief-card:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.belief-card h4 {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+  color: #2e7d32;
+}
+
+.belief-card p {
+  font-size: 0.95rem;
+  color: #1c1c1c;
+  line-height: 1.4;
+}
+
+/* CTA spacing */
+
+.about-belief-actions {
+  margin-top: 48px;
+  display: flex;
+  justify-content: center;
+}
+
+/* CTA inside About should not look like a new section */
+
+.about-belief .cta {
+  padding: 0;
+  background: transparent;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .about-belief {
+    padding: 64px 28px;
+  }
+
+  .belief-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+  .about-page {
+    padding: 72px 6% 64px;
+  }
+
+  .about-hero {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .two-column {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .two-column.reverse .about-text,
+  .two-column.reverse .about-image {
+    order: initial;
+  }
+
+  .data-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-belief {
+    padding: 56px 28px;
+  }
+
+  .about-belief-actions {
+    flex-direction: column;
+  }
+}
