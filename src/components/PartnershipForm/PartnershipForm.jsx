@@ -1,7 +1,9 @@
 import "./PartnershipForm.css";
+import { submitForm } from "../../utils/submitForm";
+
 
 export default function PartnershipForm() {
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     const form = e.target;
@@ -17,24 +19,42 @@ export default function PartnershipForm() {
     const location = form.location.value;
     const message = form.message.value;
 
+    // 1️⃣ Send to Google Sheet (silent)
+    submitForm({
+      form_type: "partnership",
+      data: {
+        organization_name: orgName,
+        organization_type: orgType,
+        contact_person: name,
+        designation: role,
+        email,
+        phone_whatsapp: phone,
+        partnership_type: partnershipType,
+        expected_reach: scale,
+        primary_locations: location,
+        objective: message
+      }
+    });
+
+    // 2️⃣ Existing WhatsApp logic (UNCHANGED)
     const whatsappMessage = `
-Hello Aarug Team,
+  Hello Aarug Team,
 
-This is ${name}, ${role} from ${orgName}.
-Organization type: ${orgType}
+  This is ${name}, ${role} from ${orgName}.
+  Organization type: ${orgType}
 
-We are interested in a partnership related to:
-${partnershipType}
+  We are interested in a partnership related to:
+  ${partnershipType}
 
-Expected reach: ${scale}
-Primary location(s): ${location}
+  Expected reach: ${scale}
+  Primary location(s): ${location}
 
-Objective:
-${message || "Discussion required"}
+  Objective:
+  ${message || "Discussion required"}
 
-Contact details:
-Email: ${email}
-Phone: ${phone}
+  Contact details:
+  Email: ${email}
+  Phone: ${phone}
     `.trim();
 
     const whatsappURL = `https://wa.me/919111361052?text=${encodeURIComponent(
@@ -43,6 +63,7 @@ Phone: ${phone}
 
     window.open(whatsappURL, "_blank");
   };
+
 
   return (
     <section id="partnerships" className="partnership-form-section">
