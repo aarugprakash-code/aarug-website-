@@ -30,6 +30,9 @@ jobs:
 
       - name: Build project
         run: npm run build
+        env:
+          VITE_AARUG_API_URL: ${{ secrets.VITE_AARUG_API_URL }}
+          VITE_AARUG_SECRET: ${{ secrets.VITE_AARUG_SECRET }}
 
       - name: Upload build output
         uses: actions/upload-pages-artifact@v3
