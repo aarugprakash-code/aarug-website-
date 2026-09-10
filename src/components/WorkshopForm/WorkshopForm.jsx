@@ -1,10 +1,20 @@
+import { useState } from "react";
 import "./WorkshopForm.css";
 import { submitForm } from "../../utils/submitForm";
 
-export default function WorkshopForm() {
+export default function WorkshopForm({ onClose }) {
+  const [cooldown, setCooldown] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (cooldown) return;
+
+    setCooldown(true);
+
+    setTimeout(() => {
+      setCooldown(false);
+    }, 10000);
 
     const name = e.target.name.value;
     const role = e.target.role.value;
@@ -25,6 +35,10 @@ export default function WorkshopForm() {
         message
       }
     });
+
+    e.target.reset();
+    onClose();
+
 
     // 2️⃣ Existing WhatsApp flow
     const whatsappText =
@@ -61,7 +75,13 @@ export default function WorkshopForm() {
         <input name="city" placeholder="City" required />
         <input name="phone" placeholder="WhatsApp Number" required />
         <textarea name="message" placeholder="Optional message" />
-        <button type="submit" className="btn primary">Send via WhatsApp</button>
+        <button
+          type="submit"
+          className="btn primary"
+          disabled={cooldown}
+        >
+          {cooldown ? "Please wait..." : "Send via WhatsApp"}
+        </button>
       </form>
     </section>
   );

@@ -46,7 +46,7 @@ const Homepage = () => {
                 isOpen={activeModal === "workshop"}
                 onClose={() => setActiveModal(null)}
             >
-                <WorkshopForm />
+                <WorkshopForm onClose={() => setActiveModal(null)} />
             </Modal>
 
             {/* Partnership Modal */}
